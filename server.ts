@@ -72,7 +72,7 @@ io.on('connection', (socket:Socket) => {
     console.log("user disconnected")
   });
 });
-const PORT =  8000;
-server.listen(PORT, () => {
+const port = process.env.PORT || 8000;
+server.listen(  port, () => {
   console.log(`Server is running on port ${PORT}`);
 });
