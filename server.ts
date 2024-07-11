@@ -56,7 +56,7 @@ io.on('connection', (socket:Socket) => {
     socket.to(roomId).emit('drawLine', { x1, y1, x2, y2 });
   });
   socket.on('sendMessage', ({ roomId, message }) => {
-    console.log(message)
+    
     io.to(roomId).emit('chatMessage', message);
   });
   socket.on('disconnect', () => {
